@@ -49,7 +49,7 @@ public class Function : ICloudEventFunction<StorageObjectData>
   public static string projectId = "<--your project ID -->";
   public static string gcp_Region = "<-- GCP Region. Example us -->";
   public static string documentAI_processor = "<-- Document AI processor ID-->";
-  public static string logId = "<-- Custom Log ID. For example, CF_SupermarketXBillParser -->";
+  public static string logId = "<-- Custom Log ID. For example, CF_SupermarketClassifier -->";
   public static string destinationBucketName1 = "<--Storage bucket to where SuperMarketX invoices are saved -->";
   public static string destinationBucketName2 = "<--Storage bucket to where SuperMarketX invoices are saved -->"; 
 
