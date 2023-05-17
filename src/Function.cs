@@ -111,11 +111,11 @@ public class Function : ICloudEventFunction<StorageObjectData>
             // Copy the source file to the appropriate destination buckets
             switch (classification)
             {
-                case "grocerybill_1": //This should be same as "Labels" in Document AI classifier
+                case "SuperMarketXInvoice": //This should be same as "Labels" in Document AI classifier
                     _storageClient.CopyObject(sourceBucketName, sourceObjectName, destinationBucketName1, destObjectName);
                     Console.WriteLine($"Copied {sourceBucketName}/{sourceObjectName} to {destinationBucketName1}/{destObjectName}.");
                     break;
-                case "grocerybill_2": //This should be same as "Labels" in Document AI classifier
+                case "SuperMarketYInvoice": //This should be same as "Labels" in Document AI classifier
                     _storageClient.CopyObject(sourceBucketName, sourceObjectName, destinationBucketName2, destObjectName);
                     Console.WriteLine($"Copied {sourceBucketName}/{sourceObjectName} to {destinationBucketName2}/{destObjectName}.");
                     break;
