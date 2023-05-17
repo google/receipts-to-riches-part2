@@ -44,20 +44,20 @@ namespace HelloGcs;
 
 public class Function : ICloudEventFunction<StorageObjectData>
 {
-  private readonly StorageClient _storageClient;
-  private readonly DocumentProcessorServiceClient _documentAI;
-  public static string projectId = "<--your project ID -->";
-  public static string gcp_Region = "<-- GCP Region. Example us -->";
-  public static string documentAI_processor = "<-- Document AI processor ID-->";
-  public static string logId = "<-- Custom Log ID. For example, CF_SupermarketClassifier -->";
-  public static string destinationBucketName1 = "<--Storage bucket to where SuperMarketX invoices are saved -->";
-  public static string destinationBucketName2 = "<--Storage bucket to where SuperMarketX invoices are saved -->"; 
+    private readonly StorageClient _storageClient;
+    private readonly DocumentProcessorServiceClient _documentAI;
+    public static string projectId = "<--your project ID -->";
+    public static string gcp_Region = "<-- GCP Region. Example us -->";
+    public static string documentAI_processor = "<-- Document AI processor ID-->";
+    public static string logId = "<-- Custom Log ID. For example, CF_SupermarketClassifier -->";
+    public static string destinationBucketName1 = "<--Storage bucket to where SuperMarketX invoices are saved -->";
+    public static string destinationBucketName2 = "<--Storage bucket to where SuperMarketX invoices are saved -->"; 
 
-  public Function()
-  {
+    public Function()
+    {
       _storageClient = StorageClient.Create();
       _documentAI = DocumentProcessorServiceClient.Create();
-  }
+    }
 
     public async Task HandleAsync(CloudEvent cloudEvent, StorageObjectData data, CancellationToken cancellationToken)
     {
